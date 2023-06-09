@@ -46,7 +46,7 @@ customElements.define('innovanza-header', InnovanzaHeader)
 
 
 
-//Tips these are the main commands that yo
+//Tips these are the main commands that you with name of the data and the product 
 git init - 
 
 git status
