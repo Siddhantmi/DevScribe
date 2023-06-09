@@ -46,7 +46,7 @@ customElements.define('innovanza-header', InnovanzaHeader)
 
 
 
-//Tips 
+//Tips these are the main commands that yo
 git init - 
 
 git status
@@ -60,3 +60,4 @@ git commit -m "initital commit"
 git push origin master
 
 git push origin main
+
