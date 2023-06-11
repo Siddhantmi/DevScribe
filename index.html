@@ -15,12 +15,15 @@
 
     <!-- Title  -->
     <title>DevScribe</title>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/8cc15e6c39.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- navbar  -->
     <Header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Dev Scribe</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -28,7 +31,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -63,6 +66,13 @@
                 </div>
             </div>
         </nav>
+
+        <div class="below-navbar navbar fixed-top " >
+           <div><button onclick="leftSideToggle()" >Menu</button></div>
+          
+
+        </div>
+
     </Header>
 
 
@@ -71,7 +81,8 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-2 px-1  position-fixed" style="padding-top: 5rem;" id="sticky-sidebar">
+                <div class="col-lg-2 col-md-2 left-side-bar px-1  position-fixed bg-dark" id="leftSideBar" style="padding-top: 6rem; "
+                    id="sticky-sidebar">
                     <h3 class="sticky-top " style="padding: 10px; margin-left: .7rem; color: rgb(14, 14, 8);">HTML
                         Tutorials</h3>
                     <div class="nav scrollbar flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
@@ -100,10 +111,10 @@
                 </div>
 
                 <div>
-                    
+
                 </div>
                 <!-- Main text coneten area  -->
-                <div class="col-md-8 offset-2 centre-body main-content" id="main">
+                <div class="col-lg-8 col-md-12 offset-lg-2  centre-body main-content" style="padding-top: 7rem;" id="main">
 
                     <div class="content-div">
                         <h1 id="1">Introduction to HTML</h1>
@@ -113,7 +124,7 @@
 
 
                     <div class="content-div">
-                        <h2>Video Tutorial</h2>
+                        <h2>Watch Video tutorial</h2>
                         <div class="video">
                             <div class="video__youtube" data-youtube>
                                 <img src="https://i.ytimg.com/vi/LIkRYKYGVn8/maxresdefault.jpg"
@@ -269,7 +280,7 @@
                         direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's Shoreditch selfies, forage
                         fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.</p>
                     <p>End of content...</p>
-                    <h2>Watch Video tutorial</h2>
+
 
 
 
@@ -277,7 +288,7 @@
                 </div>
 
                 <!-- Right side navbar  -->
-                <div class="col-md-2 " id="sticky-sidebar">
+                <div class="right-side-bar col-lg-2 position-fixed offset-lg-10 offset-8" style="padding-top: 5rem;" id="rightSideBar" id="sticky-sidebar ">
                     <div class="sticky-top main-content">
                         <div class="nav flex-column">
 
@@ -292,12 +303,12 @@
                 </div>
             </div>
 
-            
+
         </div>
     </section>
 
     <section>
-        
+
     </section>
 
 

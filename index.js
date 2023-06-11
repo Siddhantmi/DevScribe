@@ -1,3 +1,5 @@
+
+//You tube video embbed button functionalty
 (function (window) {
 
     'use strict';
@@ -51,3 +53,24 @@ function ready() {
         document.addEventListener('DOMContentLoaded', lightweightYoutubePlayer.init);
     }
 }
+//end
+
+//Sidebars toggle
+function leftSideToggle() {
+    var x = document.getElementById("leftSideBar");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  //Sidebars toggle
+function rightSideToggle() {
+    var y = document.getElementById("rightSideBar");
+    if (y.style.display === "none") {
+      y.style.display = "block";
+    } else {
+      y.style.display = "none";
+    }
+  }
