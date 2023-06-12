@@ -138,29 +138,34 @@ header .navbar-nav .active {
 
 .centre-body p {
   text-align:left;
- 
 }
 
 .centre-body h1 {
   line-height: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   font-size: 36px;
   font-weight: bold;
 }
 
 .centre-body h2 {
-  margin-top: 40px;
-  margin-bottom: 15px;
   font-size: 24px;
+  margin-bottom: .8rem;
 }
 
-.centre-body .content-div {
-  margin: 1rem 0;
+.centre-body hr{
+  margin: 2rem 0;
 }
 
 .centre-body .code-area-pre {
   padding-left: 2rem;
   background-color: #000000;
+}
+
+.centre-body .pre-code-wrapper{
+  background-color: #222222;
+  padding: 4px;
+  margin-bottom: .6rem;
+  
 }
 
 .centre-body .strong-text{

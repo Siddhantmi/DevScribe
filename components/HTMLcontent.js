@@ -10,11 +10,11 @@ class IntroductionToHTML extends HTMLElement {
                     <div class="content-div">
                         <h1 id="PageTitle1">Introduction to HTML</h1>
                         <p>HTML is the name of the file with the system and proper naming system</p>
-                        <hr>
+                        
                     </div>
+                    <hr>
 
-
-                    <div class="content-div">
+                    <!-- <div class="content-div">
                         <h2 id="PageTitle2">Watch Video tutorial</h2>
                         <div class="video">
                             <div class="video__youtube" data-youtube>
@@ -25,25 +25,35 @@ class IntroductionToHTML extends HTMLElement {
                             </div>
                         </div>
                         <hr>
-                    </div>
+                    </div> -->
 
                     <div class="content-div">
-                        <h2 id="PageTitle3">What is HTML?</h2>
+                        <h2 id="PageTitle2">What is HTML?</h2>
 
                         <li>HTML stands for Hyper <span class="strong-text">&lth1 class="foo"&gth1. Heading 1&lt/h1&gt</span> Text Markup Language</li>
                         <li>HTML is the standard markup language for creating Web pages</li>
                         <li>HTML consists of a series of elements</li>
                         <li>HTML elements tell the browser how to display the content</li>
-                        <hr>
+                       
                     </div>
 
+                    <hr>
 
                     <div class="content-div">
                         <h2 id="3">A Simple HTML Document</h2>
-                        <pre class="code-area-pre"><code class="language-html code-area-pre"><script type="prism-html-markup">
-<h1 class="foo">h1. Heading 1</h1></script></code>
-
+                        <div class="pre-code-wrapper">
+                           <p>Hello</p>
+                            <pre class="code-area-pre"><code class="language-html code-area-pre"><script type="prism-html-markup">
+<!--Name of the data-->
+<h1 class="foo">h1. Heading 1</h1> 
+</script></code>
 </pre>
+
+<p>
+    Try It yourself
+</p>
+                        </div>
+                   
                         <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code
                             editing
                             brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable
