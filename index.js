@@ -74,3 +74,4 @@ function rightSideToggle() {
       y.style.display = "none";
     }
   }
+

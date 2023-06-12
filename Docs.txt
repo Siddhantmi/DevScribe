@@ -61,3 +61,14 @@ git push origin master
 
 git push origin main
 
+background-color: #001233; Dark blue for navbar 
+    color: #ff595a; for the heading text in blue 
+    color: #efe0ca; for normal text 
+
+        background-color: #efe0ca;
+            color: #001233;
+
+                color: #001233;
+
+                background-color: #efe0ca;
+
