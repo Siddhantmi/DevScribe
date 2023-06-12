@@ -65,8 +65,51 @@ function leftSideToggle() {
   }
 }
 
+//Below header text and right side nav auto text taking
+var pageTitle1 = document.getElementById('PageTitle1').innerHTML;
+document.getElementById('belowHeaderHeading').innerHTML = pageTitle1;
+document.getElementById('rightNavHeading1').innerHTML = pageTitle1;
+
+var pageTitle2 = document.getElementById('PageTitle2').innerHTML;
+document.getElementById('rightNavHeading2').innerHTML = pageTitle2;
+
+var pageTitle3 = document.getElementById('PageTitle3').innerHTML;
+document.getElementById('rightNavHeading3').innerHTML = pageTitle3;
+
+var pageTitle4 = document.getElementById('PageTitle4').innerHTML;
+document.getElementById('rightNavHeading4').innerHTML = pageTitle4;
+
+var pageTitle5 = document.getElementById('PageTitle5').innerHTML;
+document.getElementById('rightNavHeading5').innerHTML = pageTitle5;
+
+var pageTitle6 = document.getElementById('PageTitle6').innerHTML;
+document.getElementById('rightNavHeading2').innerHTML = pageTitle2;
+
+var pageTitle7 = document.getElementById('PageTitle7').innerHTML;
+document.getElementById('rightNavHeading7').innerHTML = pageTitle7;
+
+var pageTitle8 = document.getElementById('PageTitle8').innerHTML;
+document.getElementById('rightNavHeading8').innerHTML = pageTitle9;
+
+var pageTitle10 = document.getElementById('PageTitle10').innerHTML;
+document.getElementById('rightNavHeading10').innerHTML = pageTitle10;
+
+var pageTitle11 = document.getElementById('PageTitle11').innerHTML;
+document.getElementById('rightNavHeading11').innerHTML = pageTitle11;
+
+var pageTitle12 = document.getElementById('PageTitle12').innerHTML;
+document.getElementById('rightNavHeading12').innerHTML = pageTitle12;
+
+var pageTitle13 = document.getElementById('PageTitle13').innerHTML;
+document.getElementById('rightNavHeading13').innerHTML = pageTitle13;
+
+var pageTitle14 = document.getElementById('PageTitle14').innerHTML;
+document.getElementById('rightNavHeading14').innerHTML = pageTitle14;
+var pageTitle15 = document.getElementById('PageTitle15').innerHTML;
+document.getElementById('rightNavHeading15').innerHTML = pageTitle15;
+
+var pageTitle16 = document.getElementById('PageTitle16').innerHTML;
+document.getElementById('rightNavHeading16').innerHTML = pageTitle16;
 
 
-//Below header text
-var pageTitle = document.getElementById('PageTitleh1').innerHTML;
-document.getElementById('belowHeaderHeading').innerHTML = pageTitle;
+
