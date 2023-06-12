@@ -23,13 +23,15 @@
 <body>
     <!-- navbar  -->
     <Header>
-        <nav class="navbar-custom navbar navbar-expand-lg fixed-top">
+        <nav class="navbar-custom navbar navbar-expand-lg fixed-top" style="position: fixed; z-index: 5;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Dev Scribe</a>
                 <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -67,10 +69,17 @@
             </div>
         </nav>
 
-        <div class="below-navbar navbar fixed-top ">
-            <a onclick="leftSideToggle()"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg></a>
+        <div class="below-navbar navbar fixed-top" style=" z-index: 3;">
+            <div class="row">
+                <div class="col-2">
+                    <a onclick="leftSideToggle()"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg></a>
+                </div>
+                <div class="col"  id="belowHeaderHeading">Heading is the name of data and the conetent</div>
+            </div>
+         
+             
         </div>
 
     </Header>
@@ -118,8 +127,8 @@
                 <!-- Main text coneten area  -->
                 <div class="col-lg-8 col-md-12 offset-lg-2  centre-body" id="main">
                     <div class="content-div">
-                        <h1 id="1">Introduction to HTML</h1>
-                        <p>HTML is the standard markup language for creating Web pages.</p>
+                        <h1 id="PageTitleh1">Introduction to HTML</h1>
+                        <p>HTML is the name of the file with the system and proper naming system</p>
                         <hr>
                     </div>
 
