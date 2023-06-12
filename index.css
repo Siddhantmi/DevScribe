@@ -114,10 +114,13 @@ header .navbar-nav .active {
 /* --------------------------Center body main text area--------------------------- */
 .centre-body {
   padding: 3rem 1.5rem;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 .centre-body p {
-  text-align: justify;
+  text-align:left;
+ 
 }
 
 .centre-body h1 {
@@ -140,6 +143,14 @@ header .navbar-nav .active {
 .centre-body .code-area-pre {
   padding-left: 2rem;
   background-color: #000000;
+}
+
+.centre-body .strong-text{
+  color: gold;
+  background-color: #0c0a0a;
+  border: 1px solid rgb(148, 147, 144);
+  padding: 3px;
+  border-radius: 3px;
 }
 
 .centre-body .video {

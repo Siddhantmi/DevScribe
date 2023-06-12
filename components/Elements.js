@@ -2,11 +2,11 @@
 //Header Navbar component
 class Navbar extends HTMLElement {
     constructor() {
-      super();
+        super();
     }
-  
+
     connectedCallback() {
-      this.innerHTML = `
+        this.innerHTML = `
       <nav class="navbar-custom navbar navbar-expand-lg fixed-top" style="position: fixed; z-index: 5;">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">Dev Scribe</a>
@@ -54,9 +54,9 @@ class Navbar extends HTMLElement {
   </nav>      
       `;
     }
-  }
-  
-  customElements.define('navbar-component', Navbar);
+}
+
+customElements.define('navbar-component', Navbar);
 
 
 
@@ -68,13 +68,13 @@ class Navbar extends HTMLElement {
 
 
 //Left Side bar component
-  class Sidebar extends HTMLElement {
+class Sidebar extends HTMLElement {
     constructor() {
-      super();
+        super();
     }
-  
+
     connectedCallback() {
-      this.innerHTML = `
+        this.innerHTML = `
       <div class="left-side-bar col-lg-2 col-md-2 px-1 position-fixed " id="leftSideBar" id="sticky-sidebar" style="margin-left: -11px;">
       <h3 class="sticky-top ">HTML
           Tutorial</h3>
@@ -109,9 +109,9 @@ class Navbar extends HTMLElement {
   </div>
       `;
     }
-  }
-  
-  customElements.define('sidebar-component', Sidebar);
+}
+
+customElements.define('sidebar-component', Sidebar);
 
 
 
@@ -122,14 +122,14 @@ class Navbar extends HTMLElement {
 
 
 
-  //Footer
-  class Footer extends HTMLElement {
+//Footer
+class Footer extends HTMLElement {
     constructor() {
-      super();
+        super();
     }
-  
+
     connectedCallback() {
-      this.innerHTML = `
+        this.innerHTML = `
       <div class="my-5 offset-lg-2">
       <!-- Footer -->
       <footer class="page-footer text-center text-lg-start text-white" style="">
@@ -155,18 +155,18 @@ class Navbar extends HTMLElement {
 
                       <!-- Grid column -->
                       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                          <h6 class="text-uppercase mb-4 font-weight-bold">Free Courses</h6>
                           <p>
-                              <a class="text-white">MDBootstrap</a>
+                              <a class="text-white">HTML</a>
                           </p>
                           <p>
-                              <a class="text-white">MDWordPress</a>
+                              <a class="text-white">CSS</a>
                           </p>
                           <p>
-                              <a class="text-white">BrandFlow</a>
+                              <a class="text-white">Javascript</a>
                           </p>
                           <p>
-                              <a class="text-white">Bootstrap Angular</a>
+                              <a class="text-white">WebDev Projects</a>
                           </p>
                       </div>
                       <!-- Grid column -->
@@ -179,16 +179,16 @@ class Navbar extends HTMLElement {
                               Useful links
                           </h6>
                           <p>
-                              <a class="text-white">Your Account</a>
+                              <a class="text-white" href="/index.html" >Home</a>
                           </p>
                           <p>
-                              <a class="text-white">Become an Affiliate</a>
+                              <a class="text-white">Code Editor</a>
                           </p>
                           <p>
-                              <a class="text-white">Shipping Rates</a>
+                              <a class="text-white">About</a>
                           </p>
                           <p>
-                              <a class="text-white">Help</a>
+                              <a class="text-white">Privacy Policy</a>
                           </p>
                       </div>
 
@@ -198,10 +198,10 @@ class Navbar extends HTMLElement {
                       <!-- Grid column -->
                       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                          <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                          <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                          <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                          <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                        <!--  <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p> -->
+                          <p><i class="fas fa-envelope mr-3"></i> iamdevscriber@gmail.com</p>
+                      <!--    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>  -->
+                      <!--    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
                       </div>
                       <!-- Grid column -->
                   </div>
@@ -218,8 +218,8 @@ class Navbar extends HTMLElement {
                       <div class="col-md-7 col-lg-8 text-center text-md-start">
                           <!-- Copyright -->
                           <div class="p-3">
-                              © 2020 Copyright:
-                              <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                              © 2022-23 Copyright:
+                              <a class="text-white" href="https://devscribe.me/">Devscribe.me</a>
                           </div>
                           <!-- Copyright -->
                       </div>
@@ -233,7 +233,7 @@ class Navbar extends HTMLElement {
 
                           <!-- Twitter -->
                           <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                                  class="fab fa-twitter"></i></a>
+                                  class="fab fa-youtube"></i></a>
 
                           <!-- Google -->
                           <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
@@ -255,6 +255,6 @@ class Navbar extends HTMLElement {
   <!-- End of .container -->
       `;
     }
-  }
-  
-  customElements.define('footer-component', Footer);
+}
+
+customElements.define('footer-component', Footer);
