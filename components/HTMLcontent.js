@@ -30,7 +30,7 @@ class IntroductionToHTML extends HTMLElement {
                     <div class="content-div">
                         <h2 id="PageTitle3">What is HTML?</h2>
 
-                        <li>HTML stands for Hyper <span class="strong-text"></span> Text Markup Language</li>
+                        <li>HTML stands for Hyper <span class="strong-text">&lth1 class="foo"&gth1. Heading 1&lt/h1&gt</span> Text Markup Language</li>
                         <li>HTML is the standard markup language for creating Web pages</li>
                         <li>HTML consists of a series of elements</li>
                         <li>HTML elements tell the browser how to display the content</li>

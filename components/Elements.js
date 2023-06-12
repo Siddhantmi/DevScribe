@@ -76,33 +76,42 @@ class Sidebar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
       <div class="left-side-bar col-lg-2 col-md-2 px-1 position-fixed " id="leftSideBar" id="sticky-sidebar" style="margin-left: -11px;">
-      <h3 class="sticky-top ">HTML
-          Tutorial</h3>
+      <h2 class="sticky-top ">HTML
+          Tutorial</h2>
       <div class="nav scrollbar flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
-          <a href="./" class="nav-link">HTML Tutorials</a>
-          <a href="./" class="nav-link">HTML Tutorials</a>
-          <a href="./" class="nav-link">HTML Tutorials</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link ...</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link ...</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link</a>
-          <a href="./" class="nav-link">Link..</a>
-          <!-- ------------------Belwo link tag needs to be blank -------------->
-          <a href="./" class="nav-link"></a>
-          <a href="./" class="nav-link"></a>
-          <a href="./" class="nav-link"></a>
-          <a href="./" class="nav-link"></a>
-          <a href="./" class="nav-link"></a>
-          <a href="./" class="nav-link"></a>
+        <div class="sidebar-part" style="margin-top: 0rem;">
+            <h3>Basic of HTML</h3>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+        </div>
+        <div class="sidebar-part" >
+            <h3>HTML Forms</h3>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+        </div>
+        <div class="sidebar-part" style="margin-bottom:10rem;">
+            <h3>Basic of HTML</h3>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">HTML Tutorials</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+            <a href="./" class="nav-link">Link</a>
+         
+        </div>
+
+          
           
 
       </div>
