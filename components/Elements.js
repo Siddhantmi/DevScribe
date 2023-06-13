@@ -20,7 +20,7 @@ class Navbar extends HTMLElement {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#">About</a>
@@ -76,12 +76,11 @@ class Sidebar extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
       <div class="left-side-bar col-lg-2 col-md-2 px-1 position-fixed " id="leftSideBar" id="sticky-sidebar" style="margin-left: -11px;">
-      <h2 class="sticky-top ">HTML
-          Tutorial</h2>
+      <h2 class="sticky-top ">HTML Course</h2>
       <div class="nav scrollbar flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
         <div class="sidebar-part" style="margin-top: 0rem;">
-            <h3>Basic of HTML</h3>
-            <a href="./" class="nav-link">HTML Tutorials</a>
+            <h3>Introduction</h3>
+            <a href="./" class="nav-link">About this course</a>
             <a href="./" class="nav-link">HTML Tutorials</a>
             <a href="./" class="nav-link">HTML Tutorials</a>
             <a href="./" class="nav-link">Link</a>

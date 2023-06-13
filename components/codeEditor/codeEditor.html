@@ -24,7 +24,7 @@
     <script src="https://kit.fontawesome.com/8cc15e6c39.js" crossorigin="anonymous"></script>
     <script src="/components/Elements.js"></script>
     <script src="/components/HTMLcontent.js"></script>
-    
+
 </head>
 
 <body>
@@ -36,74 +36,68 @@
 
 
 
-<section>
-    <div class="container-code-editor" style="margin-top: 3rem;">
-        <div class="row">
-            <!-- this input text div  -->
-            <div class="col code-editor-input">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                            type="button" role="tab" aria-controls="home" aria-selected="true">HTML</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                            type="button" role="tab" aria-controls="profile" aria-selected="false">CSS</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">JavaScript</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="run-button nav-link" 
-                            type="button" onclick="run()" aria-controls="contact" aria-selected="false">Run Code</button>
-                    </li>
-                </ul>
-                <div class="code tab-content" id="myTabContent">
-                    <div class=" tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="html-code row">
-                           
-                            <textarea>
-                      
+    <section>
+        <div class="container-code-editor" style="margin-top: 3rem;">
+            <div class="row">
+                <!-- this input text div  -->
+                <div class="col code-editor-input">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">HTML</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">CSS</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                                type="button" role="tab" aria-controls="contact"
+                                aria-selected="false">JavaScript</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="run-button nav-link" type="button" onclick="run()" aria-controls="contact"
+                                aria-selected="false">Run Code</button>
+                        </li>
+                    </ul>
+                    <div class="code tab-content" id="myTabContent">
+                        <div class=" tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="html-code row">
+
+                                <textarea>
+
                             </textarea>
 
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
-                        <div class="css-code row">
-                           
-                            <textarea></textarea>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <div class="js-code row">
-                           <textarea></textarea>
+                            </div>
                         </div>
 
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                            <div class="css-code row">
+
+                                <textarea></textarea>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="js-code row">
+                                <textarea></textarea>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- This final result tab  -->
-            <div class="col">
-                <iframe id="result"></iframe>
-                
+                <!-- This final result tab  -->
+                <div class="col">
+                    <iframe id="result"></iframe>
+
+                </div>
             </div>
         </div>
-    </div>
+        
 
-</section>
-    
-
-
-   
-
-
-
-
+    </section>
 
     <!-- --------------------javascript files ---------------------  -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
