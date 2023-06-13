@@ -43,7 +43,7 @@ class Navbar extends HTMLElement {
                   </li>
 
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Code Editor</a>
+                      <a class="nav-link" href="/components/codeEditor/codeEditor.html">Code Editor</a>
                   </li>
 
 
