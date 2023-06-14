@@ -60,6 +60,56 @@ customElements.define('navbar-component', Navbar);
 
 
 
+class InsideHeadLinks extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+        <!-- Stylesheets  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/prism/prism.css">
+        <link rel="stylesheet" href="/index.css">
+        <!-- font awesome  -->
+        <script src="https://kit.fontawesome.com/8cc15e6c39.js" crossorigin="anonymous"></script>
+        <script src="/components/Elements.js"></script>
+        <script src="/components/HTMLcontent.js"></script>
+      `;
+    }
+}
+
+customElements.define('inside-head-links', InsideHeadLinks);
+
+
+
+
+class BelowHeaderNav extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = `
+        <!-- Below Header bar ------------------------------------>
+        <div class="below-navbar navbar fixed-top" style=" z-index: 3;">
+            <div class="row">
+                <div class="col-2">
+                    <a onclick="leftSideToggle()"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg></a>
+                </div>
+                <div class="col" id="belowHeaderHeading">Heading</div>
+            </div>
+        </div>
+      `;
+    }
+}
+
+customElements.define('below-header-nav', BelowHeaderNav);
 
 
 
@@ -80,7 +130,7 @@ class Sidebar extends HTMLElement {
       <div class="nav scrollbar flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
         <div class="sidebar-part" style="margin-top: 0rem;">
             <h3>Introduction</h3>
-            <a href="./" class="nav-link">About this course</a>
+            <a href="/components/HTMLCourse/About-this-course.html" class="nav-link">About this course</a>
             <a href="./" class="nav-link">HTML Tutorials</a>
             <a href="./" class="nav-link">HTML Tutorials</a>
             <a href="./" class="nav-link">Link</a>
