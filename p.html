@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devscribe - Home</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="flex justify-between items-center">
+
+            <!-- Toggle Button for Sidebar -->
+            <button id="sidebar-toggle" class="lg:hidden text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 18h16">
+                    </path>
+                    <!-- Additional line to complete the bottom line -->
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="text-2xl font-bold">Devscribe</div>
+            </div>
+
+            <!-- Responsive Navigation Menu -->
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#" class="hover:text-gray-300">Home</a>
+                <a href="#" class="hover:text-gray-300">About</a>
+                <div class="group relative">
+                    <a href="#" class="hover:text-gray-300">Services</a>
+                    <div class="hidden group-hover:block absolute bg-gray-800 text-white py-2 space-y-2">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Service 1</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-700">Service 2</a>
+                    </div>
+                </div>
+                <a href="#" class="hover:text-gray-300">Contact</a>
+            </div>
+        </div>
+
+        <!-- Responsive Navigation Menu (Hidden by default) -->
+        <div id="responsive-menu" class="lg:hidden hidden mt-2">
+            <a href="#" class="block py-2 hover:bg-gray-800">Home</a>
+            <a href="#" class="block py-2 hover:bg-gray-800">About</a>
+            <div class="group relative">
+                <a href="#" class="block py-2 hover:bg-gray-800">Services</a>
+                <div class="hidden group-hover:block absolute bg-gray-800 text-white py-2 space-y-2">
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-700">Service 1</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-700">Service 2</a>
+                </div>
+            </div>
+            <a href="#" class="block py-2 hover:bg-gray-800">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content and Sidebar -->
+    <div class="flex-1 flex overflow-hidden">
+        <!-- Sidebar -->
+        <div id="sidebar"
+            class="w-3/6 lg:w-1/6 bg-gray-800 text-white p-4 fixed h-full overflow-y-auto hidden lg:block">
+            <!-- Search Bar -->
+            <div class="mb-4">
+                <input type="text" placeholder="Search"
+                    class="w-full px-2 py-1 border border-gray-700 rounded focus:outline-none">
+            </div>
+            <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
+            <p>Hello</p>
+            <!-- Add more sidebar content as needed -->
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="w-full lg:w-5/6 p-4 ml-auto overflow-y-auto">
+            <section id="section1" class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Section 1</h2>
+                <p>Your content goes here...</p>
+            </section>
+
+            <section id="section2" class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Section 2</h2>
+                <p>Your content goes here...</p>
+            </section>
+
+            <section id="section3" class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Section 3</h2>
+                <p>Your content goes here...</p>
+            </section>
+            <!-- Add more sections as needed -->
+
+            <!-- Footer -->
+            <footer class="w-full bg-gray-900 text-white p-4 mt-8">
+                <p class="text-center">Your Footer Content Goes Here</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Include the combined script file -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('responsive-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('sidebar-toggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('hidden');
+        });
+
+
+        document.body.addEventListener('click', function (event) {
+            console.log('Clicked:', event.target.id);
+
+            if (event.target.id === 'menu-toggle') {
+                document.getElementById('responsive-menu').classList.toggle('hidden');
+            }
+
+            if (event.target.id === 'sidebar-toggle') {
+                document.getElementById('sidebar').classList.toggle('hidden');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+
+this is the code file in html project now please convert my this project into react project by guiding me what to do
+from begininig till end at the end i should be able to see same project with its code in reactjs and tailwind css
