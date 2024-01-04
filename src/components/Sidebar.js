@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Sidebar = ({ isSidebarOpen, updateSelectedSection }) => {
+const Sidebar = ({ isSidebarOpen, updateSelectedSection, title }) => {
   const handleLinkClick = (sectionId) => {
     updateSelectedSection(sectionId);
   };
@@ -10,16 +10,7 @@ const Sidebar = ({ isSidebarOpen, updateSelectedSection }) => {
   return (
     <div id="sidebar" className={`w-3/6 md:w-2/6 lg:w-1/6 bg-gray-800 text-white z-10 p-4 fixed h-full overflow-y-auto ${isSidebarOpen ? '' : 'hidden'} lg:block`}>
       {/* Heading */}
-      <h1 className="text-xl font-bold mb-4">Sidebar</h1>
-
-      {/* Search Bar */}
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="Search"
-          className="w-full px-2 py-1 border border-gray-700 rounded focus:outline-none"
-        />
-      </div>
+      <h1 className="text-xl font-bold mb-4">{title}</h1>
 
       {/* Links */}
       <div>

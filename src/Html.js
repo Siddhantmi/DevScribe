@@ -3,10 +3,10 @@ import React from 'react';
 import MainBody from './components/MainBody';
 
 
-const HomePage = () => {
+const Html = () => {
     const sectionsData = [
         {
-            id: 'section1', title: 'Section 1', content: `
+            id: 'section1', title: 'Introduction to HTML', content: `
       If you want to customize the appearance of specific HTML tags within your code block, you can achieve this by using a custom syntax highlighter that supports token-based styling. In your case, you can modify the SyntaxHighlighter component to apply custom styles for specific HTML tags, like <h1>.`,
             code:
                 `    <div className="flex flex-col h-screen"> 
@@ -27,6 +27,6 @@ const HomePage = () => {
 
 };
 
-export default HomePage;
+export default Html;
 
 

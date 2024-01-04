@@ -1,15 +1,13 @@
-// src/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBar from './SearchBar';
 
 const Navbar = ({ toggleSidebar }) => {
+  
   const toggleResponsiveMenu = () => {
-    document.getElementById('responsive-menu').classList.toggle('hidden');
-  };
-
-  const handleSearch = (searchTerm) => {
-    console.log('Search term:', searchTerm);
+    const responsiveMenu = document.getElementById('responsive-menu');
+    if (responsiveMenu) {
+      responsiveMenu.classList.toggle('hidden');
+    }
   };
 
   return (
@@ -35,13 +33,16 @@ const Navbar = ({ toggleSidebar }) => {
         </div>
 
         <div className="hidden lg:flex items-center space-x-4">
-          <SearchBar onSearch={handleSearch} />
           <Link to="/" className="hover:text-gray-300">
             Home
           </Link>
-          <button className="hover:text-gray-300" onClick={(e) => e.preventDefault()}>
-            About
-          </button>
+          <Link to="/html" className="hover:text-gray-300">
+            HTML
+          </Link>
+          <Link to="/aboutUs" className="hover:text-gray-300">
+            About us
+          </Link>
+
           <div className="group relative">
             <button className="hover:text-gray-300" onClick={(e) => e.preventDefault()}>
               Services

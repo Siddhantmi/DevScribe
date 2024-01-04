@@ -1,10 +1,12 @@
 // src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar'; 
-import Sidebar from './components/Sidebar'; 
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import CodeRun from './CodeRun';
-import HomePage from './HomePage';
+import Html from './Html';
+import AboutUs from './AboutUs';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -20,26 +22,32 @@ const App = () => {
     <Router>
       <div className="flex flex-col h-screen">
         <Navbar toggleSidebar={toggleSidebar} />
-        
-          <Routes>
-            <Route path="/" element={
-              <>
+        <Routes>
+          <Route path="/html" element={
+            <>
               <div className="flex-1 flex overflow-hidden">
-                <Sidebar isSidebarOpen={isSidebarOpen} />
-                <HomePage />
+                <Sidebar isSidebarOpen={isSidebarOpen} title="HTML" />
+                <div className="w-full lg:w-5/6 p-4 ml-auto overflow-y-auto">
+                  <Html />
+                  <Footer />
                 </div>
-              </>
-            } />
-            <Route path="/coderun" element={
-
-                <CodeRun />
-              
-            } />
-          </Routes>
-          
-        </div>
-        
-   
+              </div>
+            </>
+          } />
+          <Route path="/coderun" element={
+            <>
+              <CodeRun />
+              <Footer />
+            </>
+          } />
+          <Route path="/aboutUs" element={
+            <>
+              <AboutUs />
+              <Footer />
+            </>
+          } />
+        </Routes>
+      </div>
     </Router>
   );
 };
