@@ -8,7 +8,7 @@ const Sidebar = ({ isSidebarOpen, updateSelectedSection }) => {
   };
 
   return (
-    <div id="sidebar" className={`w-3/6 md:w-2/6 lg:w-1/6 bg-gray-800 text-white p-4 fixed h-full overflow-y-auto ${isSidebarOpen ? '' : 'hidden'} lg:block`}>
+    <div id="sidebar" className={`w-3/6 md:w-2/6 lg:w-1/6 bg-gray-800 text-white z-10 p-4 fixed h-full overflow-y-auto ${isSidebarOpen ? '' : 'hidden'} lg:block`}>
       {/* Heading */}
       <h1 className="text-xl font-bold mb-4">Sidebar</h1>
 
