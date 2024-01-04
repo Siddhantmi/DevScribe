@@ -107,6 +107,7 @@ const CodeRun = () => {
         <iframe
           className="border border-gray-600 w-full bg-white text-black"
           style={outputareaStyle}
+          title='output'
           srcDoc={output}
         />
       </div>
