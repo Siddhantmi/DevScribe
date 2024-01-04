@@ -5,7 +5,7 @@ import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 const Section = ({ id, title, content, code }) => {
-  const codeRef = useRef(null);
+  
   const [isCodeCopied, setCodeCopied] = useState(false);
 
   const handleCopyCode = () => {
