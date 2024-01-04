@@ -1,32 +1,37 @@
-// src/App.js
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 import MainBody from './components/MainBody';
-
-
+ // Import the sectionsData from the external file
+ import sectionsData from './data/sectionData';
 const Html = () => {
-    const sectionsData = [
-        {
-            id: 'section1', title: 'Introduction to HTML', content: `
-      If you want to customize the appearance of specific HTML tags within your code block, you can achieve this by using a custom syntax highlighter that supports token-based styling. In your case, you can modify the SyntaxHighlighter component to apply custom styles for specific HTML tags, like <h1>.`,
-            code:
-                `    <div className="flex flex-col h-screen"> 
-    <Navbar toggleSidebar={toggleSidebar} />
-    <div className="flex-1 flex overflow-hidden">
-    <Sidebar isSidebarOpen={isSidebarOpen} updateSelectedSection={updateSelectedSection} />
-    <MainBody sections={sectionsData} />
-    </div>
-    </div>` },
-        { id: 'section2', title: 'Section 2', content: 'Your content goes here...', code: '<h1>Hello world</h1>' },
-        { id: 'section3', title: 'Section 3', content: 'Your content goes here...', code: '<h1>Hello world</h1>' },
-        // Add more sections as needed
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+
+    const [selectedSection, setSelectedSection] = useState(null);
+
+    const menuItems = [
+        { to: '', label: 'this is js one', sectionId: 'jsone' },
+        { to: '', label: 'This is js two', sectionId: 'jstwo' },
+        // Add more items as needed
     ];
 
     return (
-        <MainBody sections={sectionsData} />
+        <>
+            <div className="flex-1 flex overflow-hidden">
+                <Sidebar isSidebarOpen={isSidebarOpen} title="HTML" updateSelectedSection={setSelectedSection} menuItems={menuItems} />
+                <div className="w-full lg:w-5/6 p-4 ml-auto overflow-y-auto">
+                    <MainBody sections={sectionsData} />
+                    <Footer />
+                </div>
+                
+            </div>
+            
+        </>
     );
-
 };
 
 export default Html;
-
-

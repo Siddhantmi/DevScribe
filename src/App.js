@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
 import CodeRun from './CodeRun';
-import Html from './Html';
 import AboutUs from './AboutUs';
 import Footer from './components/Footer';
+import Html from './Html';
+
 
 
 const App = () => {
@@ -17,35 +17,27 @@ const App = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-
   return (
     <Router>
       <div className="flex flex-col h-screen">
         <Navbar toggleSidebar={toggleSidebar} />
         <Routes>
-          <Route path="/html" element={
-            <>
-              <div className="flex-1 flex overflow-hidden">
-                <Sidebar isSidebarOpen={isSidebarOpen} title="HTML" />
-                <div className="w-full lg:w-5/6 p-4 ml-auto overflow-y-auto">
-                  <Html />
-                  <Footer />
-                </div>
-              </div>
-            </>
+
+          <Route path="/html" element={<Html/>} />
+
+          <Route path="/coderun" element={<>
+            <CodeRun />
+            <Footer />
+          </>
           } />
-          <Route path="/coderun" element={
-            <>
-              <CodeRun />
-              <Footer />
-            </>
-          } />
+
           <Route path="/aboutUs" element={
             <>
               <AboutUs />
               <Footer />
             </>
           } />
+
         </Routes>
       </div>
     </Router>
