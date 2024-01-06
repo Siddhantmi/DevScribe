@@ -5,7 +5,7 @@ import Comments from "@/components/comments/Comments";
 
 
 
-const SinglePage = () => {
+export default function SinglePage(){
 
   return (
     <div className={styles.container}>
@@ -55,4 +55,3 @@ const SinglePage = () => {
   );
 };
 
-export default SinglePage;

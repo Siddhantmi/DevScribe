@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { ThemeContext } from '@/context/ThemeContext';
 
 
-const ThemeToggle = () => {
+export default function ThemeToggle(){
 
   const { toggle, theme } = useContext(ThemeContext)
 
@@ -28,5 +28,3 @@ const ThemeToggle = () => {
     </div>
   )
 };
-
-export default ThemeToggle

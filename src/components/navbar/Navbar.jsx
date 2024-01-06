@@ -5,7 +5,7 @@ import Link from 'next/link'
 import AuthLinks from '../authLinks/AuthLinks'
 import ThemeToggle from '../themeToggle/ThemeToggle'
 
-const Navbar = () => {
+export default function Navbar(){
     return (
         <div className={styles.container} >
             
@@ -21,5 +21,3 @@ const Navbar = () => {
         </div>
     )
 }
-
-export default Navbar

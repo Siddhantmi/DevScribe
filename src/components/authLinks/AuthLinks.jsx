@@ -4,7 +4,7 @@ import styles from "./authLinks.module.css";
 import { useState } from "react";
 import { signOut, useSession } from "next-auth/react";
 
-const AuthLinks = () => {
+export default function AuthLinks(){
   const [open, setOpen] = useState(false);
 
   const { status } = useSession();
@@ -48,5 +48,3 @@ const AuthLinks = () => {
     </>
   );
 };
-
-export default AuthLinks;

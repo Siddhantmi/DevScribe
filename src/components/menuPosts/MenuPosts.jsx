@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./menuPosts.module.css"
 
-const MenuPosts = ({ withImage }) => {
+export default function MenuPosts({ withImage }){
   return (
     <div className={styles.items}>
       <Link href="/" className={styles.item}>
@@ -81,5 +81,3 @@ const MenuPosts = ({ withImage }) => {
     </div>
   );
 };
-
-export default MenuPosts;

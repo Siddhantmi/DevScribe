@@ -3,7 +3,7 @@ import { signIn, useSession } from "next-auth/react";
 import styles from "./loginPage.module.css";
 import { useRouter } from "next/navigation";
 
-const LoginPage = () => {
+export default function LoginPage(){
   const { status } = useSession();
 
   const router = useRouter();
@@ -28,5 +28,3 @@ const LoginPage = () => {
     </div>
   );
 };
-
-export default LoginPage;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./menuCategories.module.css";
 
-const MenuCategories = () => {
+export default function MenuCategories(){
   return (
     <div className={styles.categoryList}>
       <Link
@@ -30,4 +30,3 @@ const MenuCategories = () => {
   );
 };
 
-export default MenuCategories;

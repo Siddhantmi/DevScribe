@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./comments.module.css";
 import Image from "next/image";
 
-const Comments = () => {
+export default function Comments(){
 
   const status = "authenticated"
 
@@ -40,4 +40,3 @@ const Comments = () => {
   );
 };
 
-export default Comments;
