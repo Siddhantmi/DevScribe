@@ -10,7 +10,7 @@ export default function Featured() {
                 <b>Welcome to Devscribe!</b>
                 <br />
                 Explore the world of simplified web learning and be a <strong>Devscriber</strong>.
-                <span>We're on a quest to transform long and challenging tutorials into short, simplified formats.</span>
+                <span>We are on a quest to transform long and challenging tutorials into short, simplified formats.</span>
             </h1>
             <div className={styles.post}>
                 <div className={styles.imgContainer}>
