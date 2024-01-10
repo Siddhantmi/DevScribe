@@ -9,6 +9,8 @@ import { AiFillLike, AiOutlineLike } from 'react-icons/ai'
 import DOMPurify from 'dompurify';
 
 const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, createdAt, category } }) => {
+
+  const baseURL = process.env.NEXTAUTH_URL
   const { data: session } = useSession()
   const [isLiked, setIsLiked] = useState(false)
   const [blogLikes, setBlogLikes] = useState(0)
@@ -21,7 +23,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
 
   const handleLike = async () => {
     try {
-      const res = await fetch(`https://devscribe.me/api/blog/${_id}/like`, {
+      const res = await fetch(`http://localhost:3000/api/blog/${_id}/like`, {
         headers: {
           'Authorization': `Bearer ${session?.user?.accessToken}`
         },

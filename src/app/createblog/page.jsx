@@ -15,6 +15,7 @@ if (typeof window !== 'undefined') {
 }
 
 const CreateBlog = () => {
+    const baseURL = process.env.NEXTAUTH_URL
     const CLOUD_NAME = 'dzimftfcz';
     const UPLOAD_PRESET = 'devscribe';
 
@@ -95,7 +96,7 @@ const CreateBlog = () => {
         try {
             const imageUrl = await uploadImage();
 
-            const res = await fetch(`https://devscribe.me/api/blog`, {
+            const res = await fetch(`http://localhost:3000/api/blog`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${session?.user?.accessToken}`,

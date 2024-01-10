@@ -11,6 +11,7 @@ import 'react-quill/dist/quill.snow.css'
 import styles from './edit.module.css'
 
 const Edit = (ctx) => {
+    const baseURL = process.env.NEXTAUTH_URL
     const CLOUD_NAME = 'doojo83ea'
     const UPLOAD_PRESET = 'my_blog_project_webdevmania'
     const [title, setTitle] = useState('')
@@ -22,7 +23,7 @@ const Edit = (ctx) => {
 
     useEffect(() => {
         async function fetchBlog() {
-            const res = await fetch(`https://devscribe.me/api/blog/${ctx.params.id}`)
+            const res = await fetch(`http://localhost:3000/api/blog/${ctx.params.id}`)
 
             const blog = await res.json()
 
@@ -71,7 +72,7 @@ const Edit = (ctx) => {
                 body.imageUrl = imageUrl
             }
 
-            const res = await fetch(`https://devscribe.me/api/blog/${ctx.params.id}`, {
+            const res = await fetch(`http://localhost:3000/api/blog/${ctx.params.id}`, {
                 headers: {
                     "Content-Type": 'application/json',
                     "Authorization": `Bearer ${session?.user?.accessToken}`

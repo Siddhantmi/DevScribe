@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import classes from './register.module.css'
 
 const Register = () => {
+    const baseURL = process.env.NEXTAUTH_URL
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -25,7 +26,7 @@ const Register = () => {
     }
 
     try {
-        const res = await fetch('https://devscribe.me/api/register', {
+        const res = await fetch(`http://localhost:3000/api/register`, {
             headers: {
                 'Content-Type': 'application/json'
             },

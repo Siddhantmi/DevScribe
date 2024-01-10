@@ -5,7 +5,8 @@ import BlogCard from '../blogCard/BlogCard';
 import Pagination from '../pagination/Pagination';
 
 export async function fetchBlogs() {
-  const res = await fetch('https://devscribe.me/api/blog', { cache: 'no-store' });
+  const baseURL = process.env.NEXTAUTH_URL
+  const res = await fetch(`http://localhost:3000/api/blog`, { cache: 'no-store' });
 
   const blogs = await res.json();
 
