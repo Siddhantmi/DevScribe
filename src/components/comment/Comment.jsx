@@ -12,7 +12,7 @@ const Comment = ({ comment, setComments }) => {
 
   const handleDeleteComment = async () => {
     try {
-      await fetch(`https://devscribe.vercel.app/api/comment/${comment?._id}`, {
+      await fetch(`https://devscribe.me/api/comment/${comment?._id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         },

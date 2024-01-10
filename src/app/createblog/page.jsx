@@ -95,7 +95,7 @@ const CreateBlog = () => {
         try {
             const imageUrl = await uploadImage();
 
-            const res = await fetch(`https://devscribe.vercel.app/api/blog`, {
+            const res = await fetch(`https://devscribe.me/api/blog`, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${session?.user?.accessToken}`,

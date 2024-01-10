@@ -12,7 +12,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [https://devscribe.vercel.app](https://devscribe.vercel.app) with your browser to see the result.
+Open [https://devscribe.me](https://devscribe.me) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 

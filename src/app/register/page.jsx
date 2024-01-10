@@ -25,7 +25,7 @@ const Register = () => {
     }
 
     try {
-        const res = await fetch('https://devscribe.vercel.app/api/register', {
+        const res = await fetch('https://devscribe.me/api/register', {
             headers: {
                 'Content-Type': 'application/json'
             },

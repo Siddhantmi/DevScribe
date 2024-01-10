@@ -77,4 +77,4 @@ export async function DELETE(req, ctx) {
 // blog -> [id] -> like -> route.js
 
 
-// https://devscribe.vercel.app/api/blog/someid/like
+// https://devscribe.me/api/blog/someid/like

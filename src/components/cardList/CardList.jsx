@@ -5,7 +5,7 @@ import BlogCard from '../blogCard/BlogCard';
 import Pagination from '../pagination/Pagination';
 
 export async function fetchBlogs() {
-  const res = await fetch('https://devscribe.vercel.app/api/blog', { cache: 'no-store' });
+  const res = await fetch('https://devscribe.me/api/blog', { cache: 'no-store' });
 
   const blogs = await res.json();
 
