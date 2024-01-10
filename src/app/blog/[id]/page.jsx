@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css'
 import { format } from 'timeago.js'
 import { useRouter } from 'next/navigation'
 import Comment from '@/components/comment/Comment'
-import person from '../../../../public/person.jpg'
 import Menu from '@/components/menu/Menu'
 import DOMPurify from 'dompurify';
 
@@ -214,7 +213,7 @@ const BlogDetails = (ctx) => {
                     <div className={styles.comment}>
                         {session ? (
                             <div className={styles.commentInput}>
-                                <Image src={person} width='45' height='45' alt="" />
+                                <Image width='45' height='45' alt="" />
                                 <input value={commentText} type="text" placeholder='Type message...' onChange={(e) => setCommentText(e.target.value)} />
                                 <button onClick={handleComment}>Post</button>
                             </div>
