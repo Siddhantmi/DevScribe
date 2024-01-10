@@ -3,52 +3,116 @@
   }
   
   .title {
-    font-size: 96px;
-    font-weight: 300;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+     /* Adjusted text color for a modern look */
+    line-height: 1.6;
   }
+  
+  .title b {
+   color: #555;
+    font-size: 20px;/* Bold text color for emphasis */
+  }
+  
+  .title strong {
+    
+    color: #e74c3c; /* Strong text color for added emphasis */
+  }
+  
+  .title span {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555; /* Adjusted additional text color for readability */
+  }
+  
+  .title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #3498db; /* Line color matches the overall theme */
+    margin: 15px auto;
+  }
+  
+  
   
   .post {
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-  
-  .imgContainer {
-    flex: 1;
-    height: 500px;
-    position: relative;
-  }
-  
-  .image {
-    object-fit: cover;
-  }
-  
-  .textContainer {
-    flex: 1;
-    display: flex;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imgContainer {
+  flex: 1;
+  height: 300px;
+  position: relative;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.textContainer {
+  flex: 1;
+  padding: 20px;
+}
+
+.postTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.postdesc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #ff4d00;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .post {
     flex-direction: column;
-    gap: 20px;
   }
-  
-  .postTitle {
-    font-size: 40px;
+
+  .imgContainer {
+    border-radius: 12px 12px 0 0;
   }
-  
-  .posteditorValue{
-    font-size: 20px;
-    font-weight: 300;
-    color: var(--softTextColor);
-  }
-  
-  .button {
-    padding: 16px 20px;
-    border: none;
-    border-radius: 5px;
-    width: max-content;
-    cursor: pointer;
-  }
-  
+}
+
   @media screen and (max-width: 1280px) {
     .title {
       font-size: 72px;

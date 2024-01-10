@@ -1,19 +1,35 @@
+/* Updated styles for the category list */
+
 .categoryList {
   margin-top: 35px;
   margin-bottom: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center; /* Center the items horizontally */
 }
 
 .categoryItem {
-  padding: 8px 15px;
-  border-radius: 10px;
-  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #484848;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.categoryItem:hover {
+  background-color: #678595;
+  color: #fff;
+}
+
+/* Specific style for the 'style' category */
 .categoryItem.style {
-  background-color: #059ef031;
+  background-color: #6e818b;
+  color: #fff;
 }
 
-
+/* Additional hover effect for the 'style' category */
+.categoryItem.style:hover {
+  background-color: #047ab4;
+}

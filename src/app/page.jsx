@@ -23,7 +23,7 @@ export default async function Home() {
       <Featured />
       <CategoryList />
       <div className={styles.content}>
-        <CardList/>
+        <CardList title="Most recent Tutorials" numberOfBlogs={6} showMoreButton={true}/>
         <Menu />
       </div>
     </div>

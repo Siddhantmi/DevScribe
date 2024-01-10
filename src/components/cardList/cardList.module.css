@@ -1,3 +1,29 @@
 .container{
-flex: 5;
-}
+  margin-right: 30px;
+  flex: 5;
+  justify-content: space-between;
+} 
+  .title{
+    margin-bottom: 30px;
+  }
+  .posts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: #ff4d00;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }

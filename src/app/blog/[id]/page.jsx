@@ -184,7 +184,7 @@ const BlogDetails = (ctx) => {
                                 : (
                                     <div className={styles.user}>
                                     <div className={styles.userImageContainer}>
-                                        <Image src="/p1.jpeg" alt="" fill className={styles.avatar} />
+                                        <Image src="/user.png" alt="" fill className={styles.avatar} />
                                     </div>
                                     <div className={styles.userTextContainer}>
                                         <span className={styles.username} >{blogDetails?.authorId?.username}</span>
@@ -214,7 +214,7 @@ const BlogDetails = (ctx) => {
                     <div className={styles.comment}>
                         {session ? (
                             <div className={styles.commentInput}>
-                                <Image width='45' height='45' alt="" />
+                                <Image src="/user.png" width='45' height='45' alt="" />
                                 <input value={commentText} type="text" placeholder='Type message...' onChange={(e) => setCommentText(e.target.value)} />
                                 <button onClick={handleComment}>Post</button>
                             </div>

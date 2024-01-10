@@ -1,52 +1,69 @@
-.container{
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
-}
-
-
-
-.logo{
-
-text-align: center;
-font-size: 36px;
-font-weight: bold;
-}
-
-.links{
+    height: 50px;
+    padding: 0 20px;
+    background-color: var(--bg);
+    color: var(--textColor);
+    z-index: 1000; /* Set a high z-index to ensure it appears on top of other content */
+  }
+  .logo {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none; /* Remove default link underline */
+  }
+  
+  .links {
     display: flex;
     gap: 20px;
     align-items: center;
-   
     font-size: 20px;
-}
-
-
-@media screen and (max-width:1280px){
-    .logo{
-        font-size: 32px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: var(--textColor);
+    transition: color 0.3s ease; /* Add smooth color transition */
+  }
+  
+  .link:hover {
+    color: #ff8c00; /* Change color on hover */
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .logo {
+      font-size: 32px;
     }
-    .links{
-        font-size: 18px;
-        gap:15px;
+    .links {
+      font-size: 18px;
+      gap: 15px;
     }
-}
-@media screen and (max-width:1024px){
-    .social{
-        display: none;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .social {
+      display: none;
     }
-    .logo{
-        text-align: left;
+    .logo {
+      text-align: left;
     }
-}
-@media screen and (max-width:768px){
-    .logo{
-font-size: 24px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo {
+      font-size: 24px;
     }
-}
-@media screen and (max-width:640px){
-    .link{
-display: none;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .link {
+      display: none;
     }
-}
+  }
+  
