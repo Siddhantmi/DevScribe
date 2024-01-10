@@ -6,7 +6,8 @@
 .pnp.js
 
 
-/src
+/src/app
+
 
 # testing
 /coverage
