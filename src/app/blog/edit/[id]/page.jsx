@@ -22,7 +22,7 @@ const Edit = (ctx) => {
 
     useEffect(() => {
         async function fetchBlog() {
-            const res = await fetch(`http://localhost:3000/api/blog/${ctx.params.id}`)
+            const res = await fetch(`https://devscribe.vercel.app/api/blog/${ctx.params.id}`)
 
             const blog = await res.json()
 
@@ -71,7 +71,7 @@ const Edit = (ctx) => {
                 body.imageUrl = imageUrl
             }
 
-            const res = await fetch(`http://localhost:3000/api/blog/${ctx.params.id}`, {
+            const res = await fetch(`https://devscribe.vercel.app/api/blog/${ctx.params.id}`, {
                 headers: {
                     "Content-Type": 'application/json',
                     "Authorization": `Bearer ${session?.user?.accessToken}`

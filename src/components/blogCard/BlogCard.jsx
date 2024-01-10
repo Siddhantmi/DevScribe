@@ -21,7 +21,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
 
   const handleLike = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/api/blog/${_id}/like`, {
+      const res = await fetch(`https://devscribe.vercel.app/api/blog/${_id}/like`, {
         headers: {
           'Authorization': `Bearer ${session?.user?.accessToken}`
         },

@@ -8,7 +8,7 @@ import CategoryList from '@/components/categoryList/CategoryList'
 import CardList from '@/components/cardList/CardList'
 
 export async function fetchBlogs() {
-  const res = await fetch('http://localhost:3000/api/blog', { cache: 'no-store' })
+  const res = await fetch('https://devscribe.vercel.app/api/blog', { cache: 'no-store' })
 
   return res.json()
 }
