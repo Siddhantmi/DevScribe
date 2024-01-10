@@ -1,4 +1,37 @@
-.content{
-    display: flex;
-    gap: 50px;
+/* Add the following styles to your existing CSS */
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto; /* Center the content */
+  max-width: 1200px; /* Set your desired maximum width */
+}
+
+/* Adjustments for CardList */
+.cardlist {
+  flex: 2; /* Adjust the flex value as needed */
+}
+
+/* Adjustments for Menu */
+.menu {
+  flex: 1; /* Adjust the flex value as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
   }
+
+  /* Adjustments for CardList in mobile view */
+  .cardlist {
+    flex: 1; /* Adjust the flex value as needed */
+    order: 2;
+    margin-top: 20px;
+  }
+
+  /* Adjustments for Menu in mobile view */
+  .menu {
+    flex: 1; /* Adjust the flex value as needed */
+    order: 1;
+  }
+}

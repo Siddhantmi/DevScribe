@@ -6,62 +6,30 @@ import Link from 'next/link'
 export default function CategoryList(){
     return (
         <div className={styles.container} >
-            <h1 className={styles.title}>Popular Categories</h1>
+            <h1 className={styles.title}>Browse by Tags</h1>
             <div className={styles.categories}>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.style}`}>
+                <Link href="/blog?cat=style" className={styles.category}>
 
-                    <Image 
-                    src="/style.png"
-                    alt=''
-                    width={32}
-                    height={32}
-                    className={styles.image}
-                    />
-                    Style
+                   
+                    #Style
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.style}`}>
+                <Link href="/blog?cat=style" className={styles.category}>
 
-                    <Image 
-                    src="/fashion.png"
-                    alt=''
-                    width={32}
-                    height={32}
-                    className={styles.image}
-                    />
-                    Fashion
+                 
+                    #Fashion
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.style}`}>
+                <Link href="/blog?cat=style" className={styles.category}>
 
-                    <Image 
-                    src="/style.png"
-                    alt=''
-                    width={32}
-                    height={32}
-                    className={styles.image}
-                    />
-                    Coding 
+                
+                    #Coding 
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.style}`}>
+                <Link href="/blog?cat=style" className={styles.category}>
 
-                    <Image 
-                    src="/style.png"
-                    alt=''
-                    width={32}
-                    height={32}
-                    className={styles.image}
-                    />
-                    Culture
+                 
+                    #Culture
                 </Link>
-                <Link href="/blog?cat=style" className={`${styles.category} ${styles.style}`}>
-
-                    <Image 
-                    src="/style.png"
-                    alt=''
-                    width={32}
-                    height={32}
-                    className={styles.image}
-                    />
-                    Culture
+                <Link href="/blog?cat=style" className={styles.category}>
+                    #Culture
                 </Link>
 
             </div>

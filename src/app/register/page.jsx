@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     try {
-        const res = await fetch(`https://devscribe.me/api/register`, {
+        const res = await fetch(`http://localhost:3000/api/register`, {
             headers: {
                 'Content-Type': 'application/json'
             },

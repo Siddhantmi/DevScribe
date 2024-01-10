@@ -10,7 +10,7 @@ import CardList from '@/components/cardList/CardList'
 export async function fetchBlogs() {
 
   
-  const res = await fetch(`https://devscribe.me/api/blog`, { cache: 'no-store' })
+  const res = await fetch(`http://localhost:3000/api/blog`, { cache: 'no-store' })
 
   return res.json()
 }
@@ -23,8 +23,8 @@ export default async function Home() {
       <Featured />
       <CategoryList />
       <div className={styles.content}>
-        <CardList/>
-        <Menu />
+        <CardList title="Most recent Tutorials" numberOfBlogs={6} showMoreButton={true} className={styles.cardlist}/>
+        <Menu className={styles.menu} />
       </div>
     </div>
   )

@@ -8,28 +8,23 @@ import CategoryList from '@/components/categoryList/CategoryList'
 import CardList from '@/components/cardList/CardList'
 
 export async function fetchBlogs() {
-    
-    const res = await fetch(`https://devscribe.me/api/blog`, { cache: 'no-store' })
 
-    return res.json()
+  
+  const res = await fetch(`http://localhost:3000/api/blog`, { cache: 'no-store' })
+
+  return res.json()
 }
 
-
 export default async function Home() {
-    const blogs = await fetchBlogs()
+  const blogs = await fetchBlogs()
 
-    return (
-        <div className={styles.container}>
-
-         
-                <div className={styles.posts}>
-                    {blogs?.length > 0
-                        ? blogs.map((blog) => (
-                            <BlogCard key={blog._id} blog={blog} />
-                        )) : <h3 className={styles.noBlogs}>There are no blogs to display</h3>}
-                </div>
-         
-
-        </div>
-    )
+  return (
+    <div className={styles.container}>
+      <div className={styles.content}>
+        
+        <CardList title="All posts"  showMoreButton={false} className={styles.cardlist}/>
+        <Menu className={styles.menu} />
+      </div>
+    </div>
+  )
 }

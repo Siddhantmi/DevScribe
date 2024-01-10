@@ -24,7 +24,7 @@ const AuthLinks = () => {
                     ? (
                         <>
                             
-                            <Link href='/create-blog' className={styles.link}>Write</Link>
+                            <Link href='/createblog' className={styles.link}>Write</Link>
 
                             <div onClick={() => { signOut() }} className={styles.link} style={{ backgroundColor: 'red', padding: '10px' }}>Logout</div>
 

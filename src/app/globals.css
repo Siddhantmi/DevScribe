@@ -3,6 +3,8 @@
   --textColor: black;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
+  --navbg: #0f172a;
+  --navtext: #ddd
 }
 
 * {
@@ -14,6 +16,7 @@
 body {
   max-width: 100vw;
   overflow-x: hidden;
+ 
 }
 
 a {
@@ -36,6 +39,7 @@ a {
 }
 
 .container {
+  padding-top: 80px;
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--textColor);

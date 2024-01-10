@@ -23,7 +23,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
 
   const handleLike = async () => {
     try {
-      const res = await fetch(`https://devscribe.me/api/blog/${_id}/like`, {
+      const res = await fetch(`http://localhost:3000/api/blog/${_id}/like`, {
         headers: {
           'Authorization': `Bearer ${session?.user?.accessToken}`
         },
@@ -48,8 +48,8 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
   // Function to truncate the description to the first 40 words
   const truncatedescription = (description) => {
     const words = description.split(' ');
-    if (words.length > 40) {
-      return words.slice(0, 40).join(' ') + '...';
+    if (words.length > 20) {
+      return words.slice(0, 20).join(' ') + '...';
     } else {
       return description;
     }
@@ -62,7 +62,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
 });
 
   return (
-    <>
+    
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           
@@ -73,21 +73,28 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id, created
 
         <div className={styles.textContainer}>
         <div className={styles.detail}>
-            <span className={styles.date}>{formattedDate}</span>
+          <span>
+          <span className={styles.date}>{formattedDate}</span>
             <span className={styles.category}>#{category}</span>
+          </span>
+           
+            <div>
             {blogLikes} {" "} {isLiked
               ? (<AiFillLike onClick={handleLike} size={20} />)
               : (<AiOutlineLike onClick={handleLike} size={20} />)}
+            </div>
+           
           </div>
+
           <Link href={`/blog/${_id}`}> <h1>{title}</h1></Link>
           
-          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedescription(desc)) }} />
+          <div className={styles.description} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(truncatedescription(desc)) }} />
 
           <Link className={styles.link} href={`/blog/${_id}`}>Read More </Link>
         </div>
 
       </div>
-    </>
+ 
 
 
   )

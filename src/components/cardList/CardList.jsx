@@ -2,49 +2,56 @@
 import React, { useEffect, useState } from 'react';
 import styles from './cardList.module.css';
 import BlogCard from '../blogCard/BlogCard';
-import Pagination from '../pagination/Pagination';
+import Link from 'next/link';
 
 export async function fetchBlogs() {
-  const baseURL = process.env.NEXTAUTH_URL
-  const res = await fetch(`https://devscribe.me/api/blog`, { cache: 'no-store' });
+  const baseURL = process.env.NEXTAUTH_URL;
+  const res = await fetch(`http://localhost:3000/api/blog`, { cache: 'no-store' });
 
   const blogs = await res.json();
 
   // Check if blogs is not null or undefined before sorting
   const sortedBlogs = blogs && blogs.length > 0
-    ? blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 6)
+    ? blogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     : [];
 
   return sortedBlogs;
 }
 
-export default function CardList() {
+const CardList = ({ title, numberOfBlogs, showMoreButton }) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const fetchedBlogs = await fetchBlogs();
-      setBlogs(fetchedBlogs);
+      const displayedBlogs = numberOfBlogs ? fetchedBlogs.slice(0, numberOfBlogs) : fetchedBlogs;
+      setBlogs(displayedBlogs);
     };
 
     fetchData();
-  }, []); // Run this effect only once when the component mounts
+  }, [numberOfBlogs]);
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title} style={{ marginTop: '50px' }}>
-        {blogs?.length > 0 && <h2>Recent Blogs</h2>}
-      </h1>
+      {title && (
+        <h1 className={styles.title}>
+          <h2>{title}</h2>
+        </h1>
+      )}
       <div className={styles.posts}>
-        {blogs?.length > 0 ? (
-          blogs.map((blog) => (
-            <BlogCard key={blog._id} blog={blog} />
-          ))
+        {blogs.length > 0 ? (
+          blogs.map((blog) => <BlogCard key={blog._id} blog={blog} />)
         ) : (
-          <h3 className={styles.noBlogs}>There are no blogs to display</h3>
+          <h3 className={styles.noBlogs}>Loading.. tutorials</h3>
         )}
       </div>
-      <Pagination />
+      {showMoreButton && (
+        <Link className={styles.button} href={`/allblogs`}>
+          More
+        </Link>
+      )}
     </div>
   );
-}
+};
+
+export default CardList;
