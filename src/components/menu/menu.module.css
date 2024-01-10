@@ -1,20 +1,26 @@
 .container {
-    flex: 1.4;
-  }
-  
-  .subtitle {
-    color: gray;
-    font-size: 16px;
-    font-weight: 400;
+  flex: 1.4;
+  padding: 20px;
   }
 
-  .title {
-    font-size: 20px;
+.subtitle {
+  color: #555; /* Dark gray for subtitle */
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #333; /* Dark color for title */
+}
+
+/* Adjust styling for MenuPosts and MenuCategories based on your components */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
   }
-  
-  
-  @media screen and (max-width: 1024px) {
-    .container {
-      display: none;
-    }
-  }
+}

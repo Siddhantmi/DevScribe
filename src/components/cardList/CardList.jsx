@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export async function fetchBlogs() {
   const baseURL = process.env.NEXTAUTH_URL;
-  const res = await fetch(`http://localhost:3000/api/blog`, { cache: 'no-store' });
+  const res = await fetch(`https://devscribe.me/api/blog`, { cache: 'no-store' });
 
   const blogs = await res.json();
 

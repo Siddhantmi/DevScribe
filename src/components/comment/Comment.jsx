@@ -13,7 +13,7 @@ const Comment = ({ comment, setComments }) => {
 
   const handleDeleteComment = async () => {
     try {
-      await fetch(`http://localhost:3000/api/comment/${comment?._id}`, {
+      await fetch(`https://devscribe.me/api/comment/${comment?._id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         },
@@ -33,7 +33,7 @@ const Comment = ({ comment, setComments }) => {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <Image className={classes.userimg} width='45' height='45' alt="" />
+        <Image className={classes.userimg} src="/user.png" width='45' height='45' alt="" />
         <div className={classes.userDetails}>
 
           <div className={classes.usernameTime}>
