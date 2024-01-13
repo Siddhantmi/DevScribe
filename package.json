@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/gtag.js": "^0.0.18",
     "bcrypt": "^5.1.0",
     "cloudinary": "^1.36.4",
     "dompurify": "^3.0.8",
