@@ -21,18 +21,18 @@ const Footer = () => {
       </div>
       <div className={styles.links}>
         <div className={styles.list}>
-          <span className={styles.listTitle}>Links</span>
-          <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+         
+          <Link href="/">Home</Link>
+          <Link href="about-us">About us</Link>
+          <Link href="contact-us">Contact us</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </div>
         <div className={styles.list}>
-          <span className={styles.listTitle}>Links</span>
-          <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          
+          <Link href="createblog">Write Blogs</Link>
+          <Link href="/allblogs">All Blog</Link>
+          <Link href="/">Categories</Link>
+          <Link href="/">Featured</Link>
         </div>
        
        

@@ -20,8 +20,8 @@ const Navbar = () => {
 
       <div className={styles.links}>
         <Link href="/" className={styles.link}>Home</Link>
-        <Link href="/" className={styles.link}>Contact us</Link>
-        <Link href="/" className={styles.link}>About us</Link>
+        <Link href="/contact-us" className={styles.link}>Contact us</Link>
+        <Link href="/about-us" className={styles.link}>About us</Link>
        
       <ThemeToggle/>
       <AuthLinks/>

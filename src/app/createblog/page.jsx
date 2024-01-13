@@ -148,6 +148,7 @@ const CreateBlog = () => {
                 <input type="text" placeholder="Title..." className={styles.input} onChange={(e) => setTitle(e.target.value)} />
 
                 {ReactQuill && (
+                  
                     <ReactQuill
                         theme="snow"
                         value={desc}
@@ -155,6 +156,7 @@ const CreateBlog = () => {
                         placeholder="Description..."
                         modules={modules}
                     />
+                 
                 )}
 
                 <select value={category} onChange={(e) => setCategory(e.target.value)}>

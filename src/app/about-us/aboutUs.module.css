@@ -1,0 +1,53 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(1.02);
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .description {
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .focusSection {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .focusTitle {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .focusText {
+    font-size: 18px;
+    color: #555;
+  }
+  
