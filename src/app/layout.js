@@ -15,6 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children, session }) {
   return (
+  
     <html lang="en">
       <body className={inter.className}>
         <ThemeContextProvider>
@@ -33,5 +34,6 @@ export default function RootLayout({ children, session }) {
         </ThemeContextProvider>
       </body>
     </html>
+
   )
 }

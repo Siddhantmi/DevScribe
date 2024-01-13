@@ -26,6 +26,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
+    "react-ga": "^3.3.1",
     "react-icons": "^4.8.0",
     "react-quill": "^2.0.0",
     "react-syntax-highlighter": "^15.5.0",
