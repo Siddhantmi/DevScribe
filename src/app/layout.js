@@ -29,17 +29,16 @@ export default function RootLayout({ children, session }) {
       </Script>
       
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-FT7QFYKVW4"></Script>
-      <Script>
+      
+      <Script id="gtag-script" inline>
         {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-FT7QFYKVW4');
-        `
-        }
-
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FT7QFYKVW4');
+        `}
       </Script>
+      
       <body className={inter.className}>
         <ThemeContextProvider>
           <ThemeProvider>
