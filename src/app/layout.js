@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
@@ -6,45 +5,29 @@ import Footer from '@/components/footer/Footer';
 import Provider from '@/SessionProvider';
 import { ThemeContextProvider } from '@/context/ThemeContext';
 import ThemeProvider from '@/providers/ThemeProvider';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
+const GTM_ID = 'GTM-T3B873Q5';
 
 export const metadata = {
   title: 'Devscribe',
   description: 'Cut the carp off',
-  googleAdsenseAccount: 'ca-pub-4583277760904170', 
-  googleAnalyticsId: 'G-FT7QFYKVW4',
 };
 
 export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','${GTM_ID}');
+        `}
+      </Script>
       <body className={inter.className}>
-        <Head>
-          {/* Google AdSense script */}
-          <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js`}></script>
-          <script>
-            {`
-              (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "${metadata.googleAdsenseAccount}",
-                enable_page_level_ads: true
-              });
-            `}
-          </script>
-
-          {/* Google Analytics script */}
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${metadata.googleAnalyticsId}`}></script>
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                window.dataLayer.push(arguments);
-              }
-              gtag('js', new Date());
-              gtag('config', '${metadata.googleAnalyticsId}');
-            `}
-          </script>
-        </Head>
         <ThemeContextProvider>
           <ThemeProvider>
             <Provider>
